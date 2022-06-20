@@ -1,0 +1,9 @@
+clear
+clc
+p=sobolset(2);
+X_sobol=net(p,20000);
+X_sobol=sortrows(X_sobol);
+X_sobol=X_sobol(2:end-1,:);
+population=value_selector(X_sobol);
+population=population(:,10:11)
+population=population(1:100,:)
